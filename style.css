@@ -41,6 +41,12 @@ nav {
   padding: 15px 0;
 }
 
+nav #menu{
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
 nav .container {
   display: flex;
   align-items: center;
@@ -168,13 +174,13 @@ nav .items-right a {
   background: #f9f9f9;
 }
 
-.offer .offer-heading, .projects .projects-heading, .reviews .reviews-heading {
+.offer .offer-heading, .projects .projects-heading, .reviews .reviews-heading, .blog .blog-heading {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
 
-.offer .offer-heading h2, .projects .projects-heading h2, .reviews .reviews-heading h2{
+.offer .offer-heading h2, .projects .projects-heading h2, .reviews .reviews-heading h2, .blog .blog-heading h2{
   font-size: 2.1rem;
   margin: 0;
   color: #222222;
@@ -284,17 +290,14 @@ nav .items-right a {
 }
 
 .reviews .container {
-  padding: 60px 0;
+  padding: 60px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .projects .text h3 {
   font-size: 1.4rem;
   text-transform: uppercase;
-}
-
-.reviews .container {
-  display: flex;
-  justify-content: space-between;
 }
 
 .reviews .card {
@@ -308,6 +311,11 @@ nav .items-right a {
   justify-content: space-between;
   align-items: flex-start;
   transition: .3s ease-in-out;
+}
+
+.reviews .card:hover h3 {
+  color: #a7cb00;
+  transition: .5s ease-in-out;
 }
 
 .reviews .card .wrap-text {
@@ -329,4 +337,364 @@ nav .items-right a {
   color: #ffc000;
 }
 
+.reviews .slider-btn i{
+  margin: 0 6px;
+  color: #eeeeee;
+}
+
+.reviews .slider-btn i:nth-child(1) {
+  color: #a7cb00;
+}
+
+.sponsor {
+  width: 100%;
+  background: #fafcff;
+}
+
+.sponsors .container {
+  padding: 100px 0;
+  display: flex;
+  max-width: 1180px;
+  justify-content: space-evenly;
+}
+
+.sponsors img {
+  opacity: .6;
+  transition: .3s ease-in-out;
+}
+
+.sponsors img:hover {
+  opacity: 1;
+}
+
+.blog {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 100px 0;
+}
+
+.blog .container {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog .blog-heading {
+  text-align: center;
+}
+
+.blog .blog-heading p {
+  line-height: 1.5;
+}
+
+.blog .card {
+  width: 100%;
+  max-width: 350px;
+}
+
+.blog .card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blog .card .info .buttons {
+  margin: 30px 0 20px 0;
+}
+
+.blog .card .info .buttons .btn {
+  padding: 7px 20px;
+  font-size: .8rem;
+  font-weight: 400;
+  border: none;
+  color: #fff;
+}
+
+.blog .card .info .buttons .btn:nth-child(2) {
+  background: #f9f9f9;
+  color: #000;
+  border: 1px solid #eeeeee;
+  transition: .3s ease-in-out;
+}
+
+.blog .card .info .buttons .btn:nth-child(2):hover {
+  background: #a7cb00;
+  color: #fff;
+  border: 1px solid #a7cb00;
+}
+
+.blog .card .info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.blog .card .info p {
+  color: #777777;
+  margin: 20px 0 30px 0;
+  padding-right: 30px;
+}
+
+.blog .card .info a {
+  text-decoration: none;
+  color: #000;
+  font-size: .9rem;
+}
+
+footer {
+  width: 100%;
+  background: #000410;
+  padding: 80px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .card {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+footer .card h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+footer .card p {
+  color: #777777;
+  margin-top: 30px;
+  line-height: 1.7;
+}
+
+footer .card .input {
+  display: flex;
+}
+
+footer .card:nth-child(3) i {
+  color: #fff;
+  margin-right: 20px;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+/* target only third card and then icon inside,so it doesnt add same styling to one before */
+footer .card:nth-child(3) i:hover {
+  color: #a7cb00;
+}
+
+
+footer .card .input input {
+  width: 100%;
+  border: none;
+  border: 1px solid #353535;
+  background: transparent;
+  padding: 12px;
+  font-size: .95rem;
+  color: #fff;
+  outline: none;
+}
+
+footer .card .input .btn {
+  padding: 12px 14px;
+  border-radius: 0;
+}
+
+footer .card:nth-child(3) {
+  max-width: 200px;
+}
+
+footer .copyright  {
+  width: 100%;
+  color: #777777;
+  margin-top: 80px;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: #a7cb00;
+}
+
+@media(max-width: 630px){
+  footer .copyright{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 730px) {
+  .about-us .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 770px) {
+  .offer .offer-heading, .projects .projects-heading, .reviews .reviews-heading, .blog .blog-heading {
+    max-width: 90%;
+  }
+}
+
+@media(max-width: 790px){
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 434px;
+  }
+}
+
+@media(min-width: 791px) and (max-width: 1170px){
+  footer .container {
+    max-width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+  }
+}
+
+@media(max-width: 900px){
+  nav {
+    background: #a7cb00;
+  }
+
+  nav .container {
+    flex-wrap: wrap;
+  }
+
+  nav #menu {
+    display: block;
+  }
+  
+  nav .container .items-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .container .items-right.hide {
+    display: none;
+  }
+
+  nav .items-right a {
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #ededed33;
+    -webkit-user-select: none;
+  }
+}
+
+@media(max-width: 950px){
+  .sponsors .container {
+    max-width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .sponsors img {
+    width: auto;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projects .wrap {
+    flex-direction: column;
+  }
+
+  .wrap .projects-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1170px) {
+  .reviews .container {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews .card {
+    margin: 12px 0;
+    justify-content: flex-start;
+  }
+
+  .reviews .card .image { 
+    margin-right: 20px;
+  }
+
+  .blog .container {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog .card {
+    max-width: 500px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 1180px) {
+  .about-us .container {
+    max-width: 90%;
+  }
+}
+
+@media(max-width: 1700px){
+
+  nav .container {
+    max-width: 90%;
+  }
+  
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero .container{
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1790px) {
+  .projects .wrap {
+    flex-wrap: wrap;
+  }
+
+  .projects .projects-image {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-us .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us .about-image, .about-us .design {
+    max-width: 650px;
+  }
+
+  .about-us br {
+    display: none;
+  }
+
+  .about-us .design span:nth-child(1) {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .offer .container {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer .card {
+    max-width: 800px;
+    margin-top: 20px;
+  }
+}
 
